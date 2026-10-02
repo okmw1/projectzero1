@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-fredoka: 'Fredoka', system-ui, -apple-system, sans-serif;
+  }
+
+  *, body, button, input, textarea, select, h1, h2, h3, h4, h5, h6, p, span, div, a, label {
+    font-family: var(--font-fredoka) !important;
+  }
+
+  body {
+    font-family: var(--font-fredoka) !important;
+    font-weight: 600;
+    background-color: #FDF2CA;
+    color: #2D2823;
+  }
+
+  h1, h2, h3, h4, .font-heading, button, label, .font-bold {
+    font-family: var(--font-fredoka) !important;
+    font-weight: 700 !important;
+  }
+
+  p, .font-body-serif {
+    font-family: var(--font-fredoka) !important;
+    font-weight: 600;
+  }
+}
+
+/* Card drop shadow matching the user's uploaded mockup */
+.board-card {
+  background: #FFFDF9;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px -5px rgba(115, 85, 45, 0.08), 0 3px 10px -2px rgba(115, 85, 45, 0.04);
+}
+
+.note-card {
+  box-shadow: 0 6px 18px -4px rgba(85, 60, 30, 0.07), 0 2px 6px -1px rgba(85, 60, 30, 0.03);
+}
+
+/* Print Stylesheet */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    page-break-after: always;
+    break-after: page;
+    box-shadow: none !important;
+  }
+}
